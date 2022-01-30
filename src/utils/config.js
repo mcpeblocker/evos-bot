@@ -6,6 +6,7 @@ const config = {
     SESSION_TYPE: process.env.SESSION_TYPE,
     DOMAIN: process.env.DOMAIN,
     PORT: process.env.PORT,
+    ADMINS: process.env.ADMINS?.split(',') || [],
 };
 
 module.exports = config;

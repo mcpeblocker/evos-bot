@@ -1,0 +1,21 @@
+choose: Quyidagilardan birini tanlang
+menu:
+  location: 📍 Joylashuvingizni jo'nating yoki yetkazib berish manzilini tanlang
+comment:
+  write: 📝 Sizning fikringiz biz uchun muhim!
+  done: ✅ Bildirgan fikringiz uchun tashakkur!
+language: 🇺🇿 Tilni tanlang
+
+keyboards:
+  common:
+    back: ◀️ Orqaga
+  main:
+    menu: 🍴 Menyu
+    orders: 🛍 Mening buyurtmalarim
+    comment: ✍️ Fikr bildirish
+    settings: ⚙️ Sozlamalar
+  menu:
+    location: 📍 Joylashuvni yuborish
+    addresses: 🗺 Mening manzillarim
+  settings:
+    language: 🇺🇿 Tilni o'zgartirish 

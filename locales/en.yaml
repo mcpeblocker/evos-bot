@@ -1,0 +1,21 @@
+choose: Choose one of these below
+menu:
+  location: 📍 Send your location or choose a delivery address
+comment:
+  write: 📝 Your opinion is important to us!
+  done: ✅ Thank you for your feedback!
+language: 🇺🇸 Choose your language
+
+keyboards:
+  common:
+    back: ◀️ Back
+  main:
+    menu: 🍴 Menu
+    orders: 🛍 My orders
+    comment: ✍️ Leave comment
+    settings: ⚙️ Settings
+  menu:
+    location: 📍 Send location
+    addresses: 🗺 My addresses
+  settings:
+    language: 🇺🇸 Change language
