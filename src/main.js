@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('./database');
 
 const bot = require('./core/bot');
 const session = require('./core/session');

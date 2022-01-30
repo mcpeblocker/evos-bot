@@ -7,6 +7,7 @@ const config = {
     DOMAIN: process.env.DOMAIN,
     PORT: process.env.PORT,
     ADMINS: process.env.ADMINS?.split(',') || [],
+    MONGO_URI: process.env.MONGO_URI,
 };
 
 module.exports = config;
