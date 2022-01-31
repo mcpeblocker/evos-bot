@@ -1,20 +1,20 @@
 const { User } = require("../models")
 
-const getUsers = async (contitions = {}) => {
+const getMany = async (contitions = {}) => {
     return await User.find(contitions);
 };
 
-const getUserById = async (id) => {
-    return await User.findById({ id });
+const getByUserId = async (userId) => {
+    return await User.findById({ userId });
 };
 
-const createUser = async (data) => {
+const create = async (data) => {
     const user = new User(data);
     return await user.save();
 };
 
 module.exports = {
-    getUsers,
-    getUserById,
-    createUser
+    getMany,
+    getByUserId,
+    create
 };

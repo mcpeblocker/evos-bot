@@ -1,6 +1,8 @@
 choose: Choose one of these below
 menu:
   location: 📍 Send your location or choose a delivery address
+  confirmLocation: |
+    Address where you want to order: ${name}. Do you verify this address?
 comment:
   write: 📝 Your opinion is important to us!
   done: ✅ Thank you for your feedback!
@@ -17,5 +19,8 @@ keyboards:
   menu:
     location: 📍 Send location
     addresses: 🗺 My addresses
+    confirmLocation:
+      no: ❌ No
+      yes: ✅ Yes
   settings:
     language: 🇺🇸 Change language

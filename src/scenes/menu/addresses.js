@@ -1,8 +1,9 @@
 const { Scenes } = require("telegraf");
 
 const scene = new Scenes.WizardScene(
-    'addresses',
+    'menu:addresses',
     (ctx) => {
+        // TODO: get addresses from db
     }
 );
 

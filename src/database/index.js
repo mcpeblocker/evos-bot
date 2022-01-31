@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const config = require('../utils/config');
+const logger = require('../utils/logger');
 
 mongoose.connect(config.MONGO_URI, (err) => {
     if (err) throw err;
-    console.log('Connected to MongoDB');
+    logger.info('Connected to MongoDB');
 });
 
 module.exports = {

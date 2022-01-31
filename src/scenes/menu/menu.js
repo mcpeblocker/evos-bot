@@ -10,12 +10,9 @@ scene.enter((ctx) => {
     ctx.reply(text, keyboard);
 });
 
-scene.on('location', (ctx) => {
-    const location = ctx.message.location;
-    console.log(location);
-})
+scene.on('location', ctx => ctx.scene.enter('menu:location'))
 
 scene.hears(match('keyboards.common.back'), ctx => ctx.scene.enter('start'));
-scene.hears(match('keyboards.menu.addresses'), ctx => ctx.scene.enter('addresses'));
+scene.hears(match('keyboards.menu.addresses'), ctx => ctx.scene.enter('menu:addresses'));
 
 module.exports = scene;

@@ -1,6 +1,8 @@
 choose: Quyidagilardan birini tanlang
 menu:
   location: 📍 Joylashuvingizni jo'nating yoki yetkazib berish manzilini tanlang
+  confirmLocation: |
+    Siz buyurtma berayotgan manzil: ${name}. Buni tasdiqlaysizmi?
 comment:
   write: 📝 Sizning fikringiz biz uchun muhim!
   done: ✅ Bildirgan fikringiz uchun tashakkur!
@@ -17,5 +19,8 @@ keyboards:
   menu:
     location: 📍 Joylashuvni yuborish
     addresses: 🗺 Mening manzillarim
+    confirmLocation:
+      no: ❌ Yo'q
+      yes: ✅ Ha
   settings:
     language: 🇺🇿 Tilni o'zgartirish 
