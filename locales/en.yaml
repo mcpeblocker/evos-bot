@@ -1,8 +1,11 @@
 choose: Choose one of these below
+error: ❗️ Something went wrong
 menu:
   location: 📍 Send your location or choose a delivery address
   confirmLocation: |
     Address where you want to order: ${name}. Do you verify this address?
+  address:
+    empty: Empty
 comment:
   write: 📝 Your opinion is important to us!
   done: ✅ Thank you for your feedback!
@@ -22,5 +25,14 @@ keyboards:
     confirmLocation:
       no: ❌ No
       yes: ✅ Yes
+  product:
+    save: 📦 Add to basket
   settings:
     language: 🇺🇸 Change language
+
+  admin:
+    getDb: 📊 Get the database
+    updateDb: 🔄 Update database
+
+admin:
+  welcome: 👮‍♀️ Welcome to the admin panel

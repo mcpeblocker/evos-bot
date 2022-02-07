@@ -13,7 +13,8 @@ const orderSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ['new', 'accepted', 'canceled', 'delivered']
+        enum: ['new', 'accepted', 'cancelled', 'delivered'],
+        default: 'new'
     }
 });
 

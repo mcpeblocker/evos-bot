@@ -12,9 +12,10 @@ const checkSession = require('./middlewares/checkSession');
 bot.use(session);
 bot.use(i18n.middleware());
 bot.use(checkSession);
-bot.use(stage.middleware());
 bot.use(auth);
+bot.use(stage.middleware());
 
 bot.start(ctx => ctx.scene.enter('start'));
+bot.command('admin', ctx => ctx.scene.enter('admin'));
 
 startBot(bot);

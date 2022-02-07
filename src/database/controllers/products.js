@@ -5,8 +5,8 @@ const create = async (data) => {
     return await product.save();
 };
 
-const getMany = async (conditions = {}) => {
-    return await Product.find(conditions);
+const getMany = async (conditions = {}, population = '') => {
+    return await Product.find(conditions).populate(population);
 };
 
 const getByCategory = async (category) => {

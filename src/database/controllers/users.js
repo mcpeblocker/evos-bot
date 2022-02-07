@@ -5,7 +5,7 @@ const getMany = async (contitions = {}) => {
 };
 
 const getByUserId = async (userId) => {
-    return await User.findById({ userId });
+    return await User.findOne({ userId });
 };
 
 const create = async (data) => {

@@ -7,7 +7,9 @@ mongoose.connect(config.MONGO_URI, (err) => {
     logger.info('Connected to MongoDB');
 });
 
-module.exports = {
+const db = {
     controllers: require('./controllers'),
     models: require('./models')
-}
+};
+
+module.exports = db;

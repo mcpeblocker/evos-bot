@@ -6,6 +6,7 @@ const stage = new Scenes.Stage([
     require('./comment'),
     require('./settings'),
     require('./language'),
+    ...require('./admin'),
 ]);
 
 module.exports = stage;

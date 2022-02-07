@@ -1,0 +1,1 @@
+exports.phone = (str) => "+" + str.replace(/\s|\(|\)|\+/g, '');

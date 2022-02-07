@@ -1,8 +1,11 @@
 choose: Quyidagilardan birini tanlang
+error: ❗️ Xatolik yuz berdi
 menu:
   location: 📍 Joylashuvingizni jo'nating yoki yetkazib berish manzilini tanlang
   confirmLocation: |
     Siz buyurtma berayotgan manzil: ${name}. Buni tasdiqlaysizmi?
+  address:
+    empty: Mavjud emas
 comment:
   write: 📝 Sizning fikringiz biz uchun muhim!
   done: ✅ Bildirgan fikringiz uchun tashakkur!
@@ -22,5 +25,14 @@ keyboards:
     confirmLocation:
       no: ❌ Yo'q
       yes: ✅ Ha
+  product:
+    save: 📦 Savatga qo'shish
   settings:
-    language: 🇺🇿 Tilni o'zgartirish 
+    language: 🇺🇿 Tilni o'zgartirish
+  
+  admin:
+    getDb: 📊 Ma'lumotlarni olish
+    updateDb: 🔄 Ma'lumotlarni yangilash
+
+admin:
+  welcome: 👮‍♀️ Admin paneliga xush kelibsiz

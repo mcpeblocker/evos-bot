@@ -12,7 +12,7 @@ const getMany = async (conditions = {}) => {
 
 // get single address by user
 const getByUser = async (user) => {
-    return await Address.findOne({ user });
+    return await Address.find({ user });
 }
 
 module.exports = {

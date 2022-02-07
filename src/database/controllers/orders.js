@@ -5,8 +5,8 @@ const create = async (data) => {
     return await order.save();
 };
 
-const getMany = async (conditions) => {
-    return await Order.find(conditions);
+const getMany = async (conditions, population = {}) => {
+    return await Order.find(conditions).populate(population);
 };
 
 const getByUser = async (conditions) => {
