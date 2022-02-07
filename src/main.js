@@ -18,4 +18,6 @@ bot.use(stage.middleware());
 bot.start(ctx => ctx.scene.enter('start'));
 bot.command('admin', ctx => ctx.scene.enter('admin'));
 
+bot.catch(err => {});
+
 startBot(bot);
