@@ -5,8 +5,7 @@ const categorySchema = new mongoose.Schema({
         ru: String,
         uz: String,
         en: String,
-    },
-    image: String
+    }
 });
 
 const Category = mongoose.model('Category', categorySchema);

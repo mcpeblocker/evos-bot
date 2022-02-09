@@ -4,5 +4,6 @@ module.exports = {
     products: require('./products'),
     orderItems: require('./orderItems'),
     categories: require('./categories'),
+    subcategories: require('./subcategories'),
     orders: require('./orders'),
 };
