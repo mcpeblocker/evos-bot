@@ -1,4 +1,5 @@
 const { Scenes } = require("telegraf");
+const { match } = require('telegraf-i18n');
 const keyboards = require("../keyboards");
 const { copyToAdmins } = require("../utils/send");
 
@@ -21,5 +22,7 @@ const scene = new Scenes.WizardScene(
         ctx.scene.enter('start');
     }
 );
+
+scene.hears(match('keyboards.common.back'), ctx => ctx.scene.enter('start'));
 
 module.exports = scene;
