@@ -10,7 +10,7 @@ const getMany = async (conditions) => {
 };
 
 const getByOrder = async (order) => {
-    return await OrderItem.find({ order });
+    return await OrderItem.find({ order }).populate('product');
 };
 
 module.exports = {

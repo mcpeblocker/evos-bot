@@ -5,10 +5,10 @@ const keyboards = require("../../keyboards");
 const geocoder = require('../../utils/geocoder');
 
 const scene = new Scenes.WizardScene(
-    'menu:location',
+    'basket:location',
     async (ctx) => {
         let location = ctx.message.location;
-        if (!location) return ctx.scene.enter('menu');
+        if (!location) return ctx.scene.enter('basket:addresses');
         const name = await geocoder.reverse(location.latitude, location.longitude);
         if (!name){
             let text = ctx.i18n.t('error');
@@ -25,11 +25,12 @@ const scene = new Scenes.WizardScene(
     },
     async (ctx) => {
         if (ctx.message.text === ctx.i18n.t('keyboards.menu.confirmLocation.no')) {
-            ctx.scene.enter('menu');
+            ctx.scene.enter('basket:addresses');
         } else if (ctx.message.text === ctx.i18n.t('keyboards.menu.confirmLocation.yes')) {
             let { location } = ctx.wizard.state;
-            await db.controllers.addresses.create(location);
-            ctx.scene.enter('menu:categories');
+            const address = await db.controllers.addresses.create(location);
+            ctx.session.address = address;
+            ctx.scene.enter('basket:order');
         }
     }
 );

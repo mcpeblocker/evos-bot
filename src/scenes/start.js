@@ -10,7 +10,8 @@ scene.enter((ctx) => {
     ctx.reply(text, keyboard);
 });
 
-scene.hears(match('keyboards.main.menu'), ctx => ctx.scene.enter('menu'));
+scene.hears(match('keyboards.main.menu'), ctx => ctx.scene.enter('menu:categories'));
+scene.hears(match('keyboards.main.basket'), ctx => ctx.scene.enter('basket'));
 scene.hears(match('keyboards.main.orders'), ctx => ctx.scene.enter('orders'));
 scene.hears(match('keyboards.main.comment'), ctx => ctx.scene.enter('comment'));
 scene.hears(match('keyboards.main.settings'), ctx => ctx.scene.enter('settings'));

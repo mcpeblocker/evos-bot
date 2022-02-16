@@ -5,4 +5,5 @@ module.exports = {
     settings: require('./settings'),
     basket: require('./basket'),
     admin: require('./admin'),
+    order: require('./order')
 };

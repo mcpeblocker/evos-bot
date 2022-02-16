@@ -1,5 +1,4 @@
 const { Subategory } = require("../models");
-const Subcategory = require("../models/Subcategory");
 
 // create Subcategory
 const create = async (data) => {
@@ -7,8 +6,8 @@ const create = async (data) => {
     return await subcategory.save();
 };
 
-const getMany = async (conditions = {}) => {
-    return await Subcategory.find(conditions);
+const getMany = async (conditions = {}, populations) => {
+    return await Subcategory.find(conditions).populate(populations);
 };
 
 const getById = async (id) => {

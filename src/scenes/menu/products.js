@@ -6,8 +6,12 @@ const keyboards = require("../../keyboards");
 const scene = new Scenes.WizardScene(
     'menu:products',
     async (ctx) => {
-        const category = ctx.session.category;
-        const products = await db.controllers.products.getMany({ category });
+        const subcategory = ctx.session.subcategory;
+        // send subcategory image + name
+        ctx.replyWithPhoto(subcategory.image, {
+            caption: subcategory.name[ctx.i18n.locale()]
+        });
+        const products = await db.controllers.products.getMany({ subcategory });
         ctx.wizard.state.products = products;
         let text = ctx.i18n.t('choose');
         let keyboard = keyboards.menu.products(ctx, products);
@@ -25,6 +29,6 @@ const scene = new Scenes.WizardScene(
     }
 );
 
-scene.hears(match('keyboards.common.back'), ctx => ctx.scene.enter('menu:categories'));
+scene.hears(match('keyboards.common.back'), ctx => ctx.scene.enter('menu:subcategories'));
 
 module.exports = scene;

@@ -13,9 +13,9 @@ const productSchema = new mongoose.Schema({
     },
     price: Number,
     image: String,
-    category: {
+    subcategory: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Category'
+        ref: 'Subcategory'
     }
 });
 

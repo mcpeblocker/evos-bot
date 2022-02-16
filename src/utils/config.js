@@ -9,6 +9,7 @@ const config = {
     ADMINS: process.env.ADMINS?.split(',') || [],
     MONGO_URI: process.env.MONGO_URI,
     GEOAPI_KEY: process.env.GEOAPI_KEY,
+    CHANNEL_ID: process.env.CHANNEL_ID
 };
 
 module.exports = config;

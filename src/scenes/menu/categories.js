@@ -20,10 +20,10 @@ const scene = new Scenes.WizardScene(
             return ctx.scene.reenter();
         }
         ctx.session.category = category;
-        ctx.scene.enter('menu:products');
+        ctx.scene.enter('menu:subcategories');
     }
 );
 
-scene.hears(match('keyboards.common.back'), ctx => ctx.scene.enter('menu'));
+scene.hears(match('keyboards.common.back'), ctx => ctx.scene.enter('start'));
 
 module.exports = scene;

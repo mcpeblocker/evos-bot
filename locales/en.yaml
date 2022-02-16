@@ -1,11 +1,27 @@
 choose: Choose one of these below
 error: ❗️ Something went wrong
+empty: Empty
 menu:
   location: 📍 Send your location or choose a delivery address
   confirmLocation: |
     Address where you want to order: ${name}. Do you verify this address?
   address:
     empty: Empty
+  product:
+    price: 💲 Cost
+    fill: ❗️ You must select at least one
+basket:
+  main: 📬 Basket
+  empty: 📭 Basket is empty
+  amount: 1️⃣ Amount
+order:
+  phone: |
+    📞 Send your phone number via the button below or in text form.
+  
+    <i>(For example <code>+998998887766</code>)</i>
+  payment: 💰 Select the payment type
+  success: ✅ Your order has been received.
+  changedStatus: Your order status has been changed to ${status}.
 comment:
   write: 📝 Your opinion is important to us!
   done: ✅ Thank you for your feedback!
@@ -19,12 +35,19 @@ keyboards:
     orders: 🛍 My orders
     comment: ✍️ Leave comment
     settings: ⚙️ Settings
+    basket: 🛒 Basket
   menu:
     location: 📍 Send location
     addresses: 🗺 My addresses
     confirmLocation:
       no: ❌ No
       yes: ✅ Yes
+  basket:
+    order: 🚚 Order
+    cancel: ❌ Cancel
+  order:
+    phone: 📲 Send a phone number
+
   product:
     save: 📦 Add to basket
   settings:
@@ -36,3 +59,6 @@ keyboards:
 
 admin:
   welcome: 👮‍♀️ Welcome to the admin panel
+  updateDb:
+    send: ⬆️ Upload Excel file
+    success: ✅ Data updated successfully

@@ -1,11 +1,28 @@
 choose: Quyidagilardan birini tanlang
 error: ❗️ Xatolik yuz berdi
+empty: Mavjud emas
 menu:
   location: 📍 Joylashuvingizni jo'nating yoki yetkazib berish manzilini tanlang
   confirmLocation: |
     Siz buyurtma berayotgan manzil: ${name}. Buni tasdiqlaysizmi?
   address:
     empty: Mavjud emas
+  product:
+    price: 💲 Narxi
+    fill: ❗️ Kamida bir dona tanlash kerak
+basket:
+  main: 📬 Savat
+  empty: 📭 Savat bo'sh
+  amount: 1️⃣ Soni
+order:
+  phone: |
+    📞 Telefon raqamingizni quyidagi tugma orqali yoki matn ko'rinishida yuboring.\n\n<i>(Misol <code>+998998887766</code>)</i>
+
+    <i>(For example <code>+998998887766</code>)</i>
+  payment: 💰 To'lov turini tanlang
+  success: ✅ Buyurtmangiz qabul qilindi.
+  changedStatus: Sizning buyurtmangiz ${status} holatiga o'tkazildi.
+
 comment:
   write: 📝 Sizning fikringiz biz uchun muhim!
   done: ✅ Bildirgan fikringiz uchun tashakkur!
@@ -19,6 +36,12 @@ keyboards:
     orders: 🛍 Mening buyurtmalarim
     comment: ✍️ Fikr bildirish
     settings: ⚙️ Sozlamalar
+    basket: 🛒 Savat
+  basket:
+    order: 🚚 Buyurtma berish
+    cancel: ❌ Bekor qilish
+  order:
+    phone: 📲 Telefon raqamni yuborish
   menu:
     location: 📍 Joylashuvni yuborish
     addresses: 🗺 Mening manzillarim
@@ -36,3 +59,6 @@ keyboards:
 
 admin:
   welcome: 👮‍♀️ Admin paneliga xush kelibsiz
+  updateDb:
+    send: ⬆️ Excel faylni yuklang
+    success: ✅ Ma'lumotlar muvaffaqiyatli yangilandi

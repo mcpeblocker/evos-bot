@@ -13,5 +13,6 @@ module.exports = async (ctx, next) => {
         user = await db.controllers.users.create(user);
     }
     ctx.session.user = user;
+    // ctx.i18n.locale(user.language);
     return next();
 }

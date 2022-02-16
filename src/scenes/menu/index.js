@@ -1,8 +1,6 @@
 module.exports = [
-    require('./menu'),
-    require('./location'),
-    require('./addresses'),
     require('./categories'),
+    require('./subcategories'),
     require('./products'),
     require('./product')
 ]

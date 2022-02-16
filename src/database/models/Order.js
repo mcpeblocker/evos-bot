@@ -15,6 +15,14 @@ const orderSchema = new mongoose.Schema({
         type: String,
         enum: ['new', 'accepted', 'cancelled', 'delivered'],
         default: 'new'
+    },
+    address: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Address'
+    },
+    date: {
+        type: Date,
+        default: Date.now
     }
 });
 
