@@ -23,6 +23,7 @@ bot.command('admin', ctx => ctx.scene.enter('admin'));
 handlePostActions(bot);
 
 bot.catch((err,ctx) => {
+    console.log(err);
     logger.error(err.message, { error: err });
     ctx.reply(ctx.i18n.t('error'));
 });

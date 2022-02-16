@@ -159,6 +159,10 @@ exports.updateDb = async (data, cb) => {
         }
         );
 
+        await Category.deleteMany({});
+        await Category.insertMany(categories);
+
+
         // do the same for others at once
         let subcategories = [];
 
@@ -188,6 +192,9 @@ exports.updateDb = async (data, cb) => {
             }
         }
         // }
+        await Subcategory.deleteMany({});
+        await Subcategory.insertMany(subcategories);
+
 
         let products = [];
         // productsSheet.eachRow(async row => {
@@ -222,12 +229,6 @@ exports.updateDb = async (data, cb) => {
             }
         }
         // })
-
-        await Category.deleteMany({});
-        await Category.insertMany(categories);
-
-        await Subcategory.deleteMany({});
-        await Subcategory.insertMany(subcategories);
 
         await Product.deleteMany({});
         await Product.insertMany(products);
