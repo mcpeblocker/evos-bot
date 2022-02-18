@@ -176,7 +176,7 @@ exports.updateDb = async (data, cb) => {
                     'name.en': row.getCell(8).value
                 }).select('_id')
                 if (!category) {
-                    logger.warn('Category not found', { row });
+                    logger.warn('Category not found');
                     return cb(false);
                     // return { success: true, message: 'Kategoriya topilmadi' }
                 };
@@ -207,7 +207,7 @@ exports.updateDb = async (data, cb) => {
                     'name.en': row.getCell(12).value
                 }).select('_id')
                 if (!subcategory) {
-                    logger.warn('Subcategory not found', { row });
+                    logger.warn('Subcategory not found');
                     return cb(false);
                     // return { success: true, message: 'Sub-Kategoriya topilmadi' }
                 };
