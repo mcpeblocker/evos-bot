@@ -49,7 +49,7 @@ const getOrderText = async order => {
     } else {
         for (let i in items) {
             let item = items[i];
-            text += `\n${+i + 1}. ${item.product?.name.uz || "Noma'lum mahsulot"} - <i>x${item.amount}</i>`;
+            text += `\n${+i + 1}. ${item.product?.name?.uz || "Noma'lum mahsulot"} - <i>x${item.amount}</i>`;
         }
     }
 
