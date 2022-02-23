@@ -186,7 +186,7 @@ exports.updateDb = async (data, cb) => {
                         ru: row.getCell(3).value,
                         en: row.getCell(4).value
                     },
-                    image: row.getCell(5).value.text || row.getCell(5).value,
+                    image: row.getCell(5).value?.text || row.getCell(5).value,
                     category: category._id
                 });
             }
