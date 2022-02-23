@@ -1,4 +1,5 @@
 const { Scenes } = require("telegraf");
+const { match } = require('telegraf-i18n');
 const keyboards = require('../../keyboards');
 const { updateDb } = require("../../utils/excel");
 const axios = require('axios').default;
@@ -29,5 +30,7 @@ const scene = new Scenes.WizardScene(
         });
     }
 );
+
+scene.hears(match('keyboards.common.back'), ctx => ctx.scene.enter('admin'));
 
 module.exports = scene;
