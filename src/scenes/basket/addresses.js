@@ -9,9 +9,7 @@ const scene = new Scenes.WizardScene(
         ctx.scene.state.addresses = addresses;
         let text;
         if (!addresses?.length) {
-            text = ctx.i18n.t('menu.address.empty');
-            ctx.reply(text);
-            return ctx.scene.enter('basket');
+            return ctx.scene.enter('basket:location');
         }
         text = ctx.i18n.t('choose');
         let keyboard = keyboards.menu.addresses(ctx, addresses);

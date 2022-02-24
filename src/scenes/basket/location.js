@@ -7,8 +7,14 @@ const geocoder = require('../../utils/geocoder');
 const scene = new Scenes.WizardScene(
     'basket:location',
     async (ctx) => {
+        let text = ctx.i18n.t('menu.location');
+        let keyboard = keyboards.basket.location(ctx);
+        ctx.reply(text, keyboard);
+        return ctx.wizard.next();
+    },
+    async (ctx) => {
         let location = ctx.message.location;
-        if (!location) return ctx.scene.enter('basket:addresses');
+        if (!location) return ctx.scene.reenter();
         const name = await geocoder.reverse(location.latitude, location.longitude);
         if (!name){
             let text = ctx.i18n.t('error');

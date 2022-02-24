@@ -22,10 +22,12 @@ bot.command('admin', ctx => ctx.scene.enter('admin'));
 
 handlePostActions(bot);
 
-bot.catch((err,ctx) => {
+bot.catch((err, ctx) => {
     console.log(err);
     logger.error(err.message, { error: err });
-    ctx.reply(ctx.i18n.t('error'));
+    if (ctx.chat.type === "private") {
+        ctx.reply(ctx.i18n.t('error'));
+    }
 });
 
 startBot(bot);

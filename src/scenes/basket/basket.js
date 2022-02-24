@@ -21,7 +21,7 @@ scene.enter(ctx => {
     ctx.replyWithHTML(text, keyboard);
 });
 
-scene.hears(match('keyboards.basket.order'), async ctx => ctx.scene.enter('basket:order'));
+scene.hears(match('keyboards.basket.order'), ctx => ctx.scene.enter('basket:order'));
 
 scene.hears(match('keyboards.basket.cancel'), ctx => {
     ctx.session.basket = [];

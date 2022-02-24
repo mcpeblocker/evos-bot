@@ -17,3 +17,8 @@ exports.payments = (ctx) => {
         [ctx.i18n.t('keyboards.common.back')]
     ]).resize();
 }
+
+exports.location = (ctx) => Markup.keyboard([
+    [Markup.button.locationRequest(ctx.i18n.t('keyboards.menu.location'))],
+    [Markup.button.text(ctx.i18n.t('keyboards.common.back'))]
+]).resize();

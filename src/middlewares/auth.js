@@ -3,6 +3,7 @@ const db = require("../database");
 module.exports = async (ctx, next) => {
     let user = ctx.session.user;
     if (user) return next();
+    if (!ctx.from) return;
     user = await db.controllers.users.getByUserId(ctx.from.id);
     if (!user) {
         user = {
