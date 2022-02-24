@@ -207,6 +207,9 @@ exports.updateDb = async (data, cb) => {
                     'name.en': row.getCell(12).value
                 }).select('_id')
                 if (!subcategory) {
+                    if (!row.getCell(10).value || !row.getCell(11).value || !row.getCell(12).value) {
+                        continue;
+                    }
                     logger.warn('Subcategory not found');
                     return cb(false);
                     // return { success: true, message: 'Sub-Kategoriya topilmadi' }
