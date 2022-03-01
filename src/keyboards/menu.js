@@ -9,7 +9,7 @@ const confirmLocation = (ctx) => Markup.keyboard([
 ]).resize();
 
 const addresses = (ctx, addresses) => {
-    let keyboard = [Markup.button.locationRequest(ctx.i18n.t('keyboards.menu.location'))];
+    let keyboard = [ctx.i18n.t('keyboards.menu.location')];
     for (let address of addresses) {
         keyboard.push(address.name);
     }

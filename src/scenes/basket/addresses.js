@@ -1,4 +1,5 @@
 const { Scenes } = require("telegraf");
+const { match } = require('telegraf-i18n');
 const db = require('../../database');
 const keyboards = require('../../keyboards');
 
@@ -26,6 +27,7 @@ const scene = new Scenes.WizardScene(
     }
 );
 
-scene.on('location', ctx => ctx.scene.enter('basket:location'));
+scene.hears(match('keyboard.menu.location'), ctx => ctx.scene.enter('basket:location'));
+// scene.on('location', ctx => ctx.scene.enter('basket:location'));
 
 module.exports = scene;
