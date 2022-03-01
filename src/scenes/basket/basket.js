@@ -19,7 +19,7 @@ scene.enter(ctx => {
         text += `\n${ctx.i18n.t('basket.amount')}: ${item.amount}`;
         sum += item.amount * item.product.price;
     }
-    text += `${ctx.i18n.t('basket.total')}: <b>${sum} ${ctx.i18n.t('basket.sum')}</b>`;
+    text += `\n\n${ctx.i18n.t('basket.total')}: <b>${sum} ${ctx.i18n.t('basket.sum')}</b>`;
     let keyboard = keyboards.basket.main(ctx);
     ctx.replyWithHTML(text, keyboard);
 });
