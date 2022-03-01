@@ -14,6 +14,8 @@ basket:
   main: 📬 Savat
   empty: 📭 Savat bo'sh
   amount: 1️⃣ Soni
+  sum: so'm
+  total: 💵 Jami
 order:
   phone: |
     📞 Telefon raqamingizni quyidagi tugma orqali yoki matn ko'rinishida yuboring.\n\n<i>(Misol <code>+998998887766</code>)</i>

@@ -13,10 +13,13 @@ scene.enter(ctx => {
         ctx.reply(text);
         return ctx.scene.enter('start');
     }
+    let sum = 0
     for (item of basket) {
         text += `\n\n<b>${item.product.name[ctx.i18n.locale()]}</b>`,
         text += `\n${ctx.i18n.t('basket.amount')}: ${item.amount}`;
+        sum += item.amount * item.product.price;
     }
+    text += `${ctx.i18n.t('basket.total')}: <b>${sum} ${ctx.i18n.t('basket.sum')}</b>`;
     let keyboard = keyboards.basket.main(ctx);
     ctx.replyWithHTML(text, keyboard);
 });

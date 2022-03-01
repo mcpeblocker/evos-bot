@@ -14,6 +14,8 @@ basket:
   main: 📬 Basket
   empty: 📭 Basket is empty
   amount: 1️⃣ Amount
+  sum: sum
+  total: 💵 Total
 order:
   phone: |
     📞 Send your phone number via the button below or in text form.
