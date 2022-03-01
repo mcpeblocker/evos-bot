@@ -41,6 +41,6 @@ const scene = new Scenes.WizardScene(
     }
 );
 
-scene.hears(match('keyboards.common.back'), ctx => ctx.scene.enter('menu'));
+scene.hears(match('keyboards.common.back'), ctx => ctx.scene.enter('basket'));
 
 module.exports = scene;
