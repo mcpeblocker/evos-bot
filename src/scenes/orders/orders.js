@@ -11,12 +11,7 @@ scene.enter(async ctx => {
         let text = ctx.i18n.t('empty');
         ctx.reply(text);
     } else {
-        // filter orders that aren't delivered and issued in a month
-        // orders = orders.filter(order => {
-        //     if (['delivered', 'cancelled'].includes(order.status)) return false;
-        //     if (dayjs(order.date).isBefore(dayjs().subtract(1, 'month'))) return false;
-        //     return true;
-        // });
+        orders = orders.sort((o1, o2) => new Date(o2.date) - new Date(o1.date));
         for (let order of orders) {
             // filter orders by status and date
             if (
@@ -24,9 +19,10 @@ scene.enter(async ctx => {
                 &&
                 (dayjs(order.date).isBefore(dayjs().subtract(1, 'month')))
             ) continue;
-
+            
             let text = await getOrderText(order);
             ctx.replyWithHTML(text);
+            break;
         };
     }
     ctx.scene.enter('start');
